@@ -1,0 +1,39 @@
+# Deployable and locally runnable ALB + Lambda Serverless example
+
+Example project using the [serverless.com](https://serverless.com) framework that allows you to:
+
+ * Locally run a lambda fronted by a application load balancer
+ * Deploy that lambda and application load balancer
+
+This is still a work in progress, all feedback is welcome.
+
+I've not found any examples that does these two things so I've made my own and leaving it here for you.
+
+Come say hi on Twitter, I'm [tmaslen](https://twitter.com/tmaslen).
+
+## Step 1: AWS account setup
+
+Obvious fact: you need an AWS account for all this to work.
+
+This is a list of everything you need before starting:
+
+ * VPC setup with two subnets.
+ * Local IAM account with the right amount of permissions given.
+   * Easiest way to do this is to give that account full access.
+   * You could use [this list of permissions instead](iam-policy.json) (this is probably wrong and so will update in future)
+
+## Step 2: Install lots of things
+
+ * `git clone git@github.com:tmaslen/serverless-local-alb-example.git`
+ * `cd serverless-offline-alb`
+ * `npm install -g serverless`
+
+## Step 3: Run it locally
+
+ * `serverless offlinealb --function handler`
+ * Check it out via `0.0.0.0:3000/`
+
+## Step 4: Deploy it
+
+ * `serverless deploy`
+ * Check it out online
