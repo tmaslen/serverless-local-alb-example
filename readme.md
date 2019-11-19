@@ -2,8 +2,8 @@
 
 Example project using the [serverless.com](https://serverless.com) framework that allows you to:
 
- * Locally run a lambda fronted by a application load balancer
- * Deploy that lambda and application load balancer
+ * Locally run a lambda fronted by a application load balancer so you can develop and test without deploying.
+ * Deploy that lambda and application load balancer, whole serverless.yml should JUST WORK, all you gotta do is add VPC and subnet details (your AWS account has a default one setup for you already).
 
 This is still a work in progress, all feedback is welcome.
 
@@ -25,7 +25,7 @@ This is a list of everything you need before starting:
 ## Step 2: Install lots of things
 
  * `git clone git@github.com:tmaslen/serverless-local-alb-example.git`
- * `cd serverless-offline-alb`
+ * `cd serverless-local-alb-example`
  * `npm install -g serverless`
 
 ## Step 3: Run it locally
@@ -35,5 +35,6 @@ This is a list of everything you need before starting:
 
 ## Step 4: Deploy it
 
+ * Add your VPC and subnet ID values into the file `[config/serverless.config.yml](config/serverless.config.yml)`
  * `serverless deploy`
  * Check it out online
