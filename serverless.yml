@@ -3,7 +3,6 @@ frameworkVersion: ">=1.4.6"
 plugins:
   modules:
     - offlinealb
-    - serverless-pseudo-parameters
 provider:
   name: aws
   runtime: nodejs8.10
